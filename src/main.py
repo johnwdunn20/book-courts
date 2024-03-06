@@ -1,6 +1,10 @@
 import requests
 import bs4
 
+# create a session
+session = requests.Session()
+# send login request
+
 # selections
 month = 3
 day = 6
@@ -10,6 +14,9 @@ year = 2024
 search_url = f"https://www.spotery.com/search?psLangId=EN&psAddrCity=San%20Francisco&psReservationDateStr={month}/{day}/{year}&psTimeRangeId=MORNING&psSourceFlow=SPOT&psOrgaSk=2654382&psIsGridView=false&psFavorites=false"
 
 # search urls require that you click a button to get availability so may be more challenging to scrape. I can either send a request for each spot (in the UI, you click on an a tag) or load all your favorite spots to see
+
+# testing pulling the data
+search_page = requests(search_url)
 
 # Basic ideas:
 '''
