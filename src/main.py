@@ -75,6 +75,7 @@ if login_response.ok:
     print(f"Sleeping for {rand_int} seconds")
     time.sleep(rand_int)
     
+    # Make a request to the court for a date (right now hard-coded in the body to 3/7/2024)
     POFA_3_response = session.post(
         url=POFA_3_request_URL, headers=POFA_3_headers, data=POFA_3_body
     )
